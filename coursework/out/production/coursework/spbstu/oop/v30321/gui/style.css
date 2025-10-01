@@ -1,0 +1,147 @@
+/* глобальный шрифт для всего, кроме заголовка */
+.root {
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 10px;
+}
+
+/* окно */
+.notepad-window {
+    -fx-background-color: #ECE9D8; /* фон */
+    -fx-border-color: #1c52b2;     /* рамка */
+    -fx-border-width: 4;           /* толстая рамка */
+}
+
+/* заголовок окна */
+.titlebar {
+    -fx-background-color: linear-gradient(to bottom, #1c52b2, #034de4, #0054e2);
+    -fx-text-fill: white;              /* белый текст */
+    -fx-font-family: "Trebuchet MS";   /* шрифт */
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-padding: 4 8;                  /* внутренние отступы */
+}
+
+/* убираем подсветку фокуса у элементов */
+.tab-pane:focused, .button:focused, .combo-box:focused, .text-area:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* заголовки вкладок: песочный фон */
+.tab-pane .tab-header-area {
+    -fx-background-color: #ECE9D8;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+/* фон под вкладками */
+.tab-pane .tab-header-background {
+    -fx-background-color: #ECE9D8;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* область содержимого вкладок: песочный фон + серая линия сверху */
+.tab-pane .tab-content-area {
+    -fx-background-color: #ECE9D8;
+    -fx-background-insets: 0;
+    -fx-border-color: #A0A0A0 transparent transparent transparent; 
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 0;
+}
+
+/* убираем лишние отступы у самих вкладок */
+.tab-pane .tab {
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}
+
+/* вкладки: прямоугольные, без скруглений */
+.tab {
+    -fx-background-color: #ECE9D8;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0; /* убираем скругления */
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 4 12;
+}
+
+/* текст на вкладках: по умолчанию черный */
+.tab .tab-label {
+    -fx-text-fill: black;
+}
+
+/* наведение на вкладку: синий фон, белый текст */
+.tab:hover {
+    -fx-background-color: #476999;
+    -fx-border-color: #476999; 
+    -fx-border-width: 0 0 1 0; 
+    -fx-background-radius: 0;
+    -fx-padding: 4 12;
+}
+.tab:hover .tab-label {
+    -fx-text-fill: white;
+}
+
+/* выбранная вкладка: синий фон, белый текст */
+.tab:selected {
+    -fx-background-color: #476999;
+    -fx-border-color: #476999;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-padding: 4 12;
+}
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+/* убираем рамку фокуса у заголовка вкладки */
+.tab .focus-indicator {
+    -fx-border-color: transparent;
+}
+
+/* текстовое поле: белый фон, серые рамки */
+.text-area {
+    -fx-control-inner-background: white;
+    -fx-border-color: #A0A0A0 #A0A0A0 #A0A0A0 #A0A0A0; 
+    -fx-border-width: 1;
+}
+.text-area .scroll-pane {
+    -fx-border-color: #A0A0A0 #A0A0A0 #A0A0A0 #A0A0A0; 
+    -fx-border-width: 1;
+}
+
+/* в раскрытом списке: выбранный элемент - синий фон, черный текст */
+.combo-box-popup .list-cell:filled:selected,
+.combo-box-popup .list-cell:filled:selected:focused {
+    -fx-background-color: #476999; /* синий фон выбранного */
+    -fx-text-fill: black;
+}
+
+/* наведение в раскрытом списке: синий фон, белый текст */
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #476999; /* синий фон при наведении */
+    -fx-text-fill: white;
+}
+
+/* кнопка: серые рамки, квадратные углы */
+.button {
+    -fx-border-color: #A0A0A0; /* серый как в XP */
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+/* комбо‑бокс: серые рамки, квадратные углы */
+.combo-box {
+    -fx-border-color: #A0A0A0;
+    -fx-border-width: 1;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+/* рамка кнопки и Комбо‑бокс не меняется при фокусе */
+.button:focused, .combo-box:focused {
+    -fx-border-color: #A0A0A0;
+}
